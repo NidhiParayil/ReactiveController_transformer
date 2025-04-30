@@ -10,12 +10,12 @@ model = PPO.load("ppo_two_pole_cart")
 
 obs, _ = env.reset()
 
-for _ in range(1000):
+for _ in range(10000):
     action, _ = model.predict(obs, deterministic=True)
     obs, reward, terminated, truncated, info = env.step(action)
 
     # For human viewing
-    time.sleep(0.01)
+    time.sleep(0.001)
 
     if terminated or truncated:
         obs, _ = env.reset()

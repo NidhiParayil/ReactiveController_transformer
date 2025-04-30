@@ -1,0 +1,90 @@
+<mujoco model="agent_target_scene">
+  <option timestep="0.01" gravity="0 0 0"/>
+<asset>
+  <!-- Light blue background -->
+  <texture name="skybox" type="skybox" builtin="flat" rgb1="0.8 0.9 1.0" width="256" height="256"/>
+</asset>
+  <worldbody>
+    <!-- Agent: Blue Box -->
+<body name="agent_root" pos="0 0 0.1">
+  <body name="agent" pos="0 0 0">
+    <joint name="slide_x" type="slide" axis="1 0 0"/>
+    <joint name="slide_y" type="slide" axis="0 1 0"/>
+    <joint name="slide_z" type="slide" axis="0 0 1"/>
+    <geom type="box" size="0.005 0.02 0.02" rgba="0 0 1 1"/>
+   <site name="agent_site" pos="0.0 0 0" size="0.0001 0.001 0.001"/>
+
+        <body name="force_sensor_1" pos="0.01 -0.011 0.01" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.001 0.005 0.005" rgba=".5 0 0 1"/>
+            <site name="sensor_1_site" pos="0.0 0 0" size="0.0001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+
+
+        <body name="force_sensor_2" pos="0.01 0.011 0.01" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.001 0.005 0.005" rgba=".5 0 0 1"/>
+            <site name="sensor_2_site" pos="0.0 0 0" size="0.0001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+
+        <body name="force_sensor_3" pos="0.01 -0.011 -0.01" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.001 0.005 0.005" rgba=".5 0 0 1"/>
+            <site name="sensor_3_site" pos="0.0 0 0" size="0.0001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+
+        <body name="force_sensor_4" pos="0.01 0.011 -0.01" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.001 0.005 0.005" rgba=".5 0 0 1"/>
+            <site name="sensor_4_site" pos="0.0 0 0" size="0.0001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+  </body>
+
+  
+</body>
+    <!-- Target: Red Sphere -->
+    <body name="target" pos="0.1 0.0 0.0">
+      <geom type="sphere" size="0.02" rgba="1 0 0 1"/>
+    </body>
+
+
+
+            <body name="def_world" pos="0.08 0.0 0.0" euler="0 0 0">
+            <geom type="sphere" size="0.01" mass="100" /> 
+             <joint name="def_joint_x" type="hinge" axis="1 0 0" pos="0 0  -0.15" range="-2.1 2.1" stiffness="169.40760505362897" damping="156.88254138958848" frictionloss="0.0" />
+             <joint name="def_joint_y" type="hinge" axis="0 1 0" pos="0 0  -0.15" range="-2.0 2.1" stiffness="169.40760505362897" damping="156.88254138958848" frictionloss="0.0" />
+             <joint name="def_joint_z" type="hinge" axis="0 0 1" pos="0 0  -0.15" range="-2 2.05" stiffness="169.40760505362897" damping="156.88254138958848" frictionloss="0.0" />
+            <composite prefix="deformable" type="cable" count="50 1 1" offset="0 0 0" size="0.1 0.05 1" curve="cos(s) sin(s) s">
+                <joint kind="main" damping="1" />
+                <geom type="cylinder" size="0.005" rgba="0.3 0.17 0.14 1" />
+            </composite>
+            </body> 
+
+
+
+
+  </worldbody>
+
+<actuator>
+  <velocity joint="slide_x" ctrlrange="-.01 .01"/>
+  <velocity joint="slide_y" ctrlrange="-.01 .01"/>
+  <velocity joint="slide_z" ctrlrange="-.01 .01"/>
+</actuator>
+
+
+<sensor>
+
+<force name="agent:eef_force" site="agent_site" cutoff="100000"/>
+<torque name="agent:eef_torque" site="agent_site" cutoff="100000"/>
+<velocimeter name= "agent:eff_vel" site="agent_site"/>
+<accelerometer  name= "agent:eff_acc" site="agent_site" cutoff="100000"/> 
+ 
+<force name="force_sensor_1_left" site="sensor_1_site" cutoff="100000"/>
+<force name="force_sensor_2_left" site="sensor_2_site" cutoff="100000"/>
+<force name="force_sensor_3_left" site="sensor_3_site" cutoff="100000"/>
+<force name="force_sensor_4_left" site="sensor_4_site" cutoff="100000"/>
+
+</sensor>
+
+</mujoco>
+
