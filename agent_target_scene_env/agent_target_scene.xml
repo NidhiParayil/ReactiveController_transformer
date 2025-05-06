@@ -66,9 +66,9 @@
   </worldbody>
 
 <actuator>
-  <velocity joint="slide_x" ctrlrange="-.01 .01"/>
-  <velocity joint="slide_y" ctrlrange="-.01 .01"/>
-  <velocity joint="slide_z" ctrlrange="-.01 .01"/>
+  <velocity joint="slide_x" ctrlrange="-.1 .1"/>
+  <velocity joint="slide_y" ctrlrange="-.1 .1"/>
+  <velocity joint="slide_z" ctrlrange="-.1 .1"/>
 </actuator>
 
 

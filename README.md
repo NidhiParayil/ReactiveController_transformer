@@ -1,2 +1,4 @@
-Testing RL Vs Decision transformers 
+RT X 1 
+
+
 

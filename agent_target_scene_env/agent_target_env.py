@@ -60,7 +60,7 @@ class AgentTargetEnv(MujocoEnv):
 
     def step(self, action):
         self.do_simulation(action, self.frame_skip)
-        # self.render()
+        self.render()
         self.data.ctrl[:] = action
         obs = self._get_obs()
         agent_pos = self.data.qpos[:3]

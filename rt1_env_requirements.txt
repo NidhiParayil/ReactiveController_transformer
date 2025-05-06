@@ -1,0 +1,97 @@
+absl-py @ file:///home/conda/feedstock_root/build_artifacts/absl-py_1742562417367/work
+astunparse==1.6.3
+attrs==25.3.0
+cachetools==5.5.2
+certifi==2025.4.26
+charset-normalizer==3.4.2
+cloudpickle @ file:///home/conda/feedstock_root/build_artifacts/cloudpickle_1736947526808/work
+contourpy==1.3.2
+cycler==0.12.1
+daqp==0.7.0
+decorator==5.2.1
+dm-tree==0.1.9
+etils @ file:///home/conda/feedstock_root/build_artifacts/etils_1741837923525/work
+evdev==1.9.2
+exceptiongroup==1.2.2
+Farama-Notifications @ file:///home/conda/feedstock_root/build_artifacts/farama-notifications_1684258120643/work
+flatbuffers==25.2.10
+fonttools==4.57.0
+fsspec @ file:///home/conda/feedstock_root/build_artifacts/fsspec_1743437245292/work
+gast==0.4.0
+gin-config==0.5.0
+glfw @ file:///home/conda/feedstock_root/build_artifacts/pyglfw_1744780379202/work
+google-auth==2.40.0
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+grpcio==1.71.0
+grpcio-tools==1.71.0
+gym==0.23.0
+gym-notices==0.0.8
+gymnasium @ file:///home/conda/feedstock_root/build_artifacts/gymnasium-split_1732344929811/work
+h5py==3.13.0
+idna==3.10
+imageio==2.37.0
+importlib_resources @ file:///home/conda/feedstock_root/build_artifacts/importlib_resources_1736252299705/work
+iniconfig==2.1.0
+jax-jumpy @ file:///home/conda/feedstock_root/build_artifacts/jax-jumpy_1734209928065/work
+keras==2.11.0
+kiwisolver==1.4.8
+libclang==18.1.1
+llvmlite==0.44.0
+Markdown==3.8
+markdown-it-py==3.0.0
+MarkupSafe==3.0.2
+matplotlib==3.10.1
+mdurl==0.1.2
+mink==0.0.10
+ml_dtypes==0.5.1
+mujoco @ file:///home/conda/feedstock_root/build_artifacts/mujoco_1745935065826/work/python/dist/mujoco-3.3.2.tar.gz#sha256=3fc27c3e7ccac034613021b6ef80377adc3fc020e42c72d4093bba6df57cd0a1
+mujoco-python-viewer==0.1.4
+namex==0.0.9
+numba==0.61.2
+numpy==1.23.5
+oauthlib==3.2.2
+opencv-python==4.11.0.86
+opt_einsum==3.4.0
+optree==0.15.0
+packaging==25.0
+pillow==11.2.1
+pluggy==1.5.0
+protobuf==3.20.3
+pyasn1==0.6.1
+pyasn1_modules==0.4.2
+pygame==2.1.0
+Pygments==2.19.1
+pynput==1.8.1
+PyOpenGL @ file:///home/conda/feedstock_root/build_artifacts/pyopengl_1745165539910/work
+pyparsing==3.2.3
+pytest==8.3.5
+python-dateutil==2.9.0.post0
+python-xlib==0.33
+PyYAML==6.0.2
+qpsolvers==4.6.0
+requests==2.32.3
+requests-oauthlib==2.0.0
+rich==14.0.0
+robosuite==1.5.1
+rsa==4.9.1
+scipy==1.15.2
+six==1.17.0
+tensorboard==2.11.2
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.11.0
+tensorflow-estimator==2.11.0
+tensorflow-io-gcs-filesystem==0.37.1
+tensorflow-probability==0.16.0
+tensorflow-serving-api==2.19.0
+termcolor==3.1.0
+tf-agents==0.13.0
+tf-slim==1.1.0
+tomli==2.2.1
+tqdm==4.67.1
+typing_extensions==4.5.0
+urllib3==2.4.0
+Werkzeug==3.1.3
+wrapt==1.17.2
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1732827521216/work

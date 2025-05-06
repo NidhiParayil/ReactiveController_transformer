@@ -1,1 +1,3 @@
-logs/ decision-transformer
+# Ignore cloned repos
+robotics_transformer/
+tensor2robot/
