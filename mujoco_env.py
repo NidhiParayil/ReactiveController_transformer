@@ -86,7 +86,7 @@ class RT1LikeMuJoCoEnv(gym.Env):
 
     def _render_rgb_array(self):
         with mujoco.Renderer(self.model, height=224, width=224) as renderer:
-            renderer.update_scene(self.data)
+            renderer.update_scene(self.data, camera="rt1_view")
             img  = renderer.render()
             # cv2.imshow("Camera View", cv2.resize(img, (224, 224)))
             # cv2.waitKey(1)
