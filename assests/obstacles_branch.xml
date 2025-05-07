@@ -1,0 +1,25 @@
+<mujoco>
+    <worldbody>
+       
+        <body name="table" pos=" 0 0 0">
+           <geom type="box" pos="0.7 0 0.2" size=".4 .2 .05" rgba=".5 .5 0.7 1" mass="200" />
+
+            <!-- <body name="def_world" pos="0.48 -0.010654162605412533 0.48" euler="0 0 0">
+            <geom type="sphere" size="0.01" mass="100" /> 
+             <joint name="def_joint_x" type="hinge" axis="1 0 0" pos="0 0  -0.15" range="-2.1 2.1" stiffness="169.40760505362897" damping="156.88254138958848" frictionloss="0.0" />
+             <joint name="def_joint_y" type="hinge" axis="0 1 0" pos="0 0  -0.15" range="-2.0 2.1" stiffness="169.40760505362897" damping="156.88254138958848" frictionloss="0.0" />
+             <joint name="def_joint_z" type="hinge" axis="0 0 1" pos="0 0  -0.15" range="-2 2.05" stiffness="169.40760505362897" damping="156.88254138958848" frictionloss="0.0" />
+            <composite prefix="deformable" type="cable" count="50 1 1" offset="0 0 0" size="0.075 0.03 .5" curve="cos(s) sin(s) s">
+                <joint kind="main" damping="104.99860143824226" />
+                <geom type="cylinder" size="0.005" rgba="0.3 0.17 0.14 1" />
+            </composite>
+            </body>  -->
+
+
+        </body>
+            <body name="target" pos="0.55 0.009 0.52" euler="0 0 0">
+            <geom type="sphere" size="0.05" mass=".01" rgba="0 0 1 1" />
+            </body>
+
+    </worldbody>
+</mujoco>

@@ -1,0 +1,38 @@
+<!--
+    
+ write a code for robot and arm with proper positon and translation
+add in the workscpe outline for refereence 
+add in obstacles to comment out
+
+-->
+<mujoco model="environment">
+<option gravity="0 0 0" />
+<size nuser_geom="50000" />
+  <compiler angle="radian" meshdir="assets" autolimits="true" />
+
+  <option integrator="implicitfast" />
+
+  <option timestep="0.001">
+    <flag warmstart="enable"></flag>
+  </option>
+
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2="1 1 1" width="512" height="512"/>
+
+  </asset>
+  <option impratio="10" />
+
+
+  <visual>
+    <map force="0.1" zfar="30"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <quality shadowsize="4096"/>
+    <global offwidth="800" offheight="800"/>
+  </visual>
+  <!-- <statistic center="0. 0 0" extent="0." /> -->  
+
+  <!-- <include file="franka_emika_panda/panda.xml"/> -->
+   <include file="ufactory_xarm7/xarm7.xml"/>
+   <include file="obstacles_branch.xml"/>
+  </mujoco>

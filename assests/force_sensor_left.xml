@@ -1,0 +1,98 @@
+<mujoco model="force_sensor_left">
+    <!-- Rectangle Plate -->
+    <body name="base_plate" pos="0.0 0.0 0.0">
+        <geom type="box" pos="0.0 0.0 0.0" size="0.0135 0.0135 0.0005" rgba="0.8 0.8 0.8 1"/> <!-- 3cm x 3cm plate -->
+
+        <!-- Force Sensors (4x4 Grid) -->
+        <!-- Top left is sensor 1, then rightward; next row starts at sensor 5 -->
+        
+        <!-- Row 1 -->
+        <body name="force_sensor_1" pos="-0.011 -0.011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba=".5 0 0 1"/>
+            <site name="sensor_1_left_site" pos="0.0 0 0" size="0.0001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_2" pos="-0.011 -0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_2_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_3" pos="-0.011 0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_3_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_4" pos="-0.011 0.011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_4_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+
+        <!-- Row 2 -->
+        <body name="force_sensor_5" pos="-0.0040 -0.011 0.003"  euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.0030 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_5_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_6" pos="-0.0040 -0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_6_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_7" pos="-0.0040 .0045 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_7_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_8" pos="-0.0040 .011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_8_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+
+        <!-- Row 3 -->
+        <body name="force_sensor_9" pos="0.0040 -0.011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_9_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_10" pos="0.0040 -0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_10_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_11" pos="0.0040 0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_11_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_12" pos="0.0040 0.011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_12_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+
+        <!-- Row 4 -->
+        <body name="force_sensor_13" pos="0.011 -0.011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_13_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_14" pos="0.011 -0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_14_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_15" pos = "0.011 0.0040 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="0.5 0 0 1"/>
+            <site name="sensor_15_left_site" pos="0.0 0 0" size="0.001 0.001 0.001"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+        <body name="force_sensor_16" pos = "0.011 0.011 0.003" euler="0 0 0">
+            <geom type="box" pos="0 0 0" size="0.003 0.003 0.001" rgba="1 0 0 1"/>
+            <site name="sensor_16_left_site" pos="0.0 0 0" size="1 1 1"/>
+            <inertial pos="0 0 0" mass="0.001" diaginertia="0 0 0"/>
+        </body>
+    </body>
+
+</mujoco>
