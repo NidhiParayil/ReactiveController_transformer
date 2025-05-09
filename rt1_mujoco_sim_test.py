@@ -18,15 +18,17 @@ setup = SequenceAgentTestSetUp()
 setup.setUp()
 setup.sequence_agent_cls = SequenceAgent
 agent = setup.create_agent_and_initialize()
+# loaded_policy = tf.saved_model.load("path/to/rt1_saved_model")  #
+# action = loaded_policy.action(time_step).action
 
 def rt1_policy(image):
+    # print(embedding)
     img = image.astype(np.float32) / 255.0
-    img = np.resize(img, (256, 320, 3))  # expected input shape
-    batched = img[np.newaxis, np.newaxis, ...]
+    img = cv2.resize(img, (320, 256))  # RT-1 expects (256, 320, 3)
 
     obs = {
-        "image": tf.convert_to_tensor(batched, dtype=tf.float32),
-        "natural_language_embedding": tf.convert_to_tensor(embedding[np.newaxis, ...], dtype=tf.float32)
+        "image": tf.convert_to_tensor(img, dtype=tf.float32),  # (256, 320, 3)
+        "natural_language_embedding": tf.convert_to_tensor(embedding.squeeze(), dtype=tf.float32)  # (512,)
     }
 
     time_step = ts.restart(obs)
@@ -39,11 +41,12 @@ obs, _ = env.reset()
 
 for step in range(200):
     frame = env._get_obs()["image"]
-    resized_frame = cv2.resize(frame, (224, 224))
+    resized_frame = cv2.resize(frame, (320, 256))
     action = rt1_policy(resized_frame)
 
     # Replace with actual control fields (adjust as needed)
     ctrl_action = np.array(action.get("world_vector", [0.0, 0.0, 0.0]))
+    print(ctrl_action)
     obs, reward, terminated, truncated, _ = env.step(ctrl_action)
 
     cv2.imshow("MuJoCo + RT-1", resized_frame)
